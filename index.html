@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        background-color: #fff;
+        color: #212121;
+      }
+
+      .timer,
+      .btn-box {
+        font-family: sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .field {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 3px;
+        background: #2c6468;
+      }
+
+      .value {
+        padding: 15px;
+        border-radius: 3px;
+        background: #78c7d4;
+        display: inline-block;
+      }
+
+      .label {
+        display: block;
+        padding-top: 5px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timer" id="timer-1">
+      <div class="field">
+        <span class="value" data-value="days">11</span>
+        <span class="label">Days</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="hours">11</span>
+        <span class="label">Hours</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="mins">11</span>
+        <span class="label">Minutes</span>
+      </div>
+
+      <div class="field">
+        <span class="value" data-value="secs">11</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
