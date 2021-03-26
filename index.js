@@ -15,8 +15,13 @@ const timer = {
     start() {
         
         setInterval(() => {
-            const startTime = Date.now();
             const targetDate = new Date('March 27, 2021');
+            const startTime = Date.now();
+
+            if (targetDate === startTime) {
+                return;
+            };
+            
             const deltaTime = targetDate - startTime;
             const timeTotal = getTimeComproments(deltaTime);
             updateClockface(timeTotal);
@@ -42,6 +47,6 @@ function getTimeComproments(time) {
     const hours = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
     const mins = pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
-    return {days, hours, mins, secs};
+    return { days, hours, mins, secs };
 };
 
