@@ -1,7 +1,3 @@
-// new CountdownTimer({
-//   selector: '#timer-1',
-//   targetDate: new Date('Jul 17, 2019'),
-// });
 const refs = {
     timer: document.querySelector('.timer'),
     days: document.querySelector('[data-value="days"]'),
@@ -11,11 +7,9 @@ const refs = {
 };
 
 const timer = {
-    // targetDate: new Date('Mar 27, 2021'),
     start() {
-        
+        const targetDate = new Date('Jul 30, 2021');
         setInterval(() => {
-            const targetDate = new Date('March 27, 2021');
             const startTime = Date.now();
 
             if (targetDate === startTime) {
@@ -49,4 +43,5 @@ function getTimeComproments(time) {
     const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
     return { days, hours, mins, secs };
 };
+
 
