@@ -9,6 +9,7 @@ const refs = {
 const timer = {
     start() {
         const targetDate = new Date('Jul 30, 2021');
+        console.log(targetDate)
         setInterval(() => {
             const startTime = Date.now();
 
