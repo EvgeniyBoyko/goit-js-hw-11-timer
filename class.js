@@ -8,7 +8,8 @@ class Timer {
     };
 
     pad(value) {
-    return value < 10 ? `0${value}` : value;
+        return value < 10 ? `0${value}` : value;
+        // return String(value).padStart(2, '0')
     };
 
     curentTime() {
