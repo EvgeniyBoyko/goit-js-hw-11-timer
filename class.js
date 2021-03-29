@@ -21,7 +21,6 @@ class Timer {
     }
 
     getTimeComproments(startTime) {
-        
         const time = this.targetDate - startTime;
         this.days.textContent = this.pad(Math.floor(time / (1000 * 60 * 60 * 24)));
         this.hours.textContent = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
